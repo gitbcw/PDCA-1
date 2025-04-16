@@ -1,0 +1,41 @@
+
+## 开发环境配置
+开发环境
+Windows-无wsl
+
+Python 3.11 (虚拟环境)
+
+Node >=16
+
+
+## 语言规范
+language_guidelines:
+  comments: "中文"    # 注释使用中文
+  variables: "英文"   # 变量名使用英文
+  documentation: "中文"  # 文档使用中文
+  commit_messages: "中文"  # 提交信息使用中文
+
+## 代码风格指南
+style_guidelines:
+  frontend:
+    - 使用函数式组件和Hooks
+    - 使用TypeScript严格模式
+    - 遵循ESLint配置的规则
+    - 组件文件使用.tsx扩展名
+    - 工具函数文件使用.ts扩展名
+  backend:
+    - 遵循PEP 8规范
+    - 使用类型注解
+    - API端点使用RESTful设计
+    - 使用异步函数处理IO操作
+
+## 注意！
+- 尽量只做用户明确告诉你做的事情，对于用户没有要求的，征询用户的意见后再做
+- 在每次对话结束时更新 docs/progress.md和docs/log.md, progress.md根据具体的进度情况进行更新，如果只是bug修复这类问题，不涉及进度更新则不更新progress.md
+- log.md的时间戳使用系统时间
+- 我们的环境中没有wsl，是windows，所以没办法使用docker
+
+## 记录
+- 启动前端服务的方式 cd frontend && npm run dev
+- 启动后端服务的方式 cd backend && .\.venv\Scripts\activate && uvicorn app.main:app --reload
+
